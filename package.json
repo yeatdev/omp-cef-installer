@@ -1,8 +1,8 @@
 {
   "name": "omp-cef-installer",
   "version": "1.0.0",
-  "description": "",
-  "main": "main.js",
+  "description": "Open.MP CEF Installer",
+  "main": "src/main/main.js",
   "scripts": {
     "start": "electron ."
   },
@@ -10,9 +10,14 @@
     "type": "git",
     "url": "git+https://github.com/yeatdev/omp-cef-installer.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "omp",
+    "cef",
+    "installer",
+    "open.mp"
+  ],
+  "author": "yeatdev",
+  "license": "MIT",
   "type": "commonjs",
   "bugs": {
     "url": "https://github.com/yeatdev/omp-cef-installer/issues"
