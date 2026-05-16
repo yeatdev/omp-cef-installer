@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open.MP CEF Installer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <header>
+                <h1>OMP CEF Installer</h1>
+                <p class="subtitle">Download and install the latest client files seamlessly.</p>
+            </header>
+
+            <div class="version-info">
+                <div class="version-row">
+                    <span class="label">Latest Version:</span>
+                    <span id="version-display" class="value loading">Fetching...</span>
+                </div>
+                <div class="version-row">
+                    <span class="label">Installed Version:</span>
+                    <span id="installed-version" class="value" style="color: #a0a0a0;">Not checked</span>
+                </div>
+            </div>
+
+            <div id="message-area" class="message hidden"></div>
+        </div>
+
+        <div class="right-panel">
+            <div class="path-selection">
+                <label for="gta-path">GTA San Andreas Directory</label>
+                <div class="input-group">
+                    <input type="text" id="gta-path" placeholder="Select your game folder..." readonly>
+                    <button id="btn-browse" class="btn-secondary">Browse</button>
+                </div>
+            </div>
+
+            <div id="progress-container" class="progress-container hidden">
+                <div class="progress-status" id="progress-status">Preparing...</div>
+                <div class="progress-bar-wrapper">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+            </div>
+
+            <div class="action-area">
+                <button id="btn-install" class="btn-primary" disabled>Install</button>
+                <button id="btn-uninstall" class="btn-danger" disabled>Uninstall</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+
+</html>

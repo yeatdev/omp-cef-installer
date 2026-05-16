@@ -1,0 +1,26 @@
+{
+  "name": "omp-cef-installer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yeatdev/omp-cef-installer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/yeatdev/omp-cef-installer/issues"
+  },
+  "homepage": "https://github.com/yeatdev/omp-cef-installer#readme",
+  "dependencies": {
+    "axios": "^1.16.1",
+    "electron": "^42.1.0",
+    "extract-zip": "^2.0.1"
+  }
+}
