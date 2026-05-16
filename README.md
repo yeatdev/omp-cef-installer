@@ -1,25 +1,33 @@
 
-
 # omp-cef-installer
 
-A desktop application for installing and managing Chromium Embedded Framework (CEF) for Open Music Player (OMP).
+A lightweight desktop application for installing and managing Chromium Embedded Framework (CEF) for Open.MP — built with **Rust + Tauri 2**.
 
-![Electron](https://img.shields.io/badge/Electron-42.1.0-47848F?style=flat-square&logo=electron)
+![Tauri](https://img.shields.io/badge/Tauri-2.0-24C8DB?style=flat-square&logo=tauri)
+![Rust](https://img.shields.io/badge/Rust-1.95-000000?style=flat-square&logo=rust)
 ![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)
 
 ## Features
 
-- Simple and fast CEF installation
-- Automated dependency management
-- Cross-platform desktop interface
-- Built with Electron for reliable desktop integration
+- ⚡ **Blazing fast** — Native Rust backend, ~5MB exe
+- 📦 Simple and fast CEF installation with progress tracking
+- 🔄 Automatic version checking and updates
+- 🗑️ One-click uninstallation
+- 🎨 Modern dark-themed UI
 
 ## Tech Stack
 
-- **Framework:** Electron
-- **Language:** JavaScript
-- **HTTP Client:** Axios
-- **Archive Extraction:** extract-zip
+- **Runtime:** Tauri 2 (Rust)
+- **Backend:** Rust (reqwest, zip, tokio)
+- **Frontend:** Vanilla HTML/CSS/JS
+- **HTTP:** reqwest with streaming downloads
+- **Archive:** zip crate
+
+## Prerequisites
+
+- [Rust](https://www.rust-lang.org/tools/install) (1.70+)
+- [Node.js](https://nodejs.org/) (20+)
+- [Visual Studio Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/) (Windows)
 
 ## Installation
 
@@ -33,31 +41,36 @@ cd omp-cef-installer
 # Install dependencies
 npm install
 
-# Run the application
-npm start
+# Run in development mode
+npm run tauri:dev
 ```
 
-## Usage
-
-After installing dependencies, run the application with:
+## Building
 
 ```bash
-npm start
+# Build a release exe
+npm run tauri:build
 ```
 
-The GUI will launch and guide you through the CEF installation process.
+The output will be in `src-tauri/target/release/`.
 
 ## Project Structure
 
 ```
 omp-cef-installer/
-├── index.html      # Main HTML entry point
-├── main.js         # Electron main process
-├── preload.js      # Preload script for IPC
-├── renderer.js     # Renderer process logic
-├── style.css       # Application styles
-├── package.json    # Project configuration
-└── version.txt     # Version information
+├── src/                    # Frontend
+│   ├── index.html
+│   ├── style.css
+│   └── main.js
+├── src-tauri/              # Rust backend
+│   ├── Cargo.toml
+│   ├── tauri.conf.json
+│   └── src/
+│       ├── main.rs
+│       └── lib.rs
+├── package.json
+├── version.txt
+└── README.md
 ```
 
 ## Contributing

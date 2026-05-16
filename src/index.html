@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMP CEF Installer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Left Panel -->
+        <div class="left-panel">
+            <header>
+                <div class="logo-area">
+                    <svg class="logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="32" rx="8" fill="url(#grad1)" />
+                        <path d="M8 16L14 22L24 10" stroke="white" stroke-width="3" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <defs>
+                            <linearGradient id="grad1" x1="0" y1="0" x2="32" y2="32">
+                                <stop offset="0%" stop-color="#9083d2" />
+                                <stop offset="100%" stop-color="#6c5ce7" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <h1>OMP CEF Installer</h1>
+                </div>
+                <p class="subtitle">Download and install the latest client files seamlessly.</p>
+            </header>
+
+            <div class="version-info">
+                <div class="version-row">
+                    <span class="label">Latest Version</span>
+                    <span id="version-display" class="value loading">Fetching...</span>
+                </div>
+                <div class="divider"></div>
+                <div class="version-row">
+                    <span class="label">Installed Version</span>
+                    <span id="installed-version" class="value muted">Not checked</span>
+                </div>
+            </div>
+
+            <div id="message-area" class="message hidden"></div>
+        </div>
+
+        <!-- Right Panel -->
+        <div class="right-panel">
+            <div class="path-selection">
+                <label for="gta-path">GTA San Andreas Directory</label>
+                <div class="input-group">
+                    <input type="text" id="gta-path" placeholder="Select your game folder..." readonly>
+                    <button id="btn-browse" class="btn-secondary">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M1 3.5A1.5 1.5 0 0 1 2.5 2h3.879a1.5 1.5 0 0 1 1.06.44l.872.87A.5.5 0 0 0 8.665 3.5H13.5A1.5 1.5 0 0 1 15 5v8a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 13V3.5z"/>
+                        </svg>
+                        Browse
+                    </button>
+                </div>
+            </div>
+
+            <div id="progress-container" class="progress-container hidden">
+                <div class="progress-status" id="progress-status">Preparing...</div>
+                <div class="progress-bar-wrapper">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+            </div>
+
+            <div class="action-area">
+                <button id="btn-install" class="btn-primary" disabled>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M8 1a.5.5 0 0 1 .5.5v9.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 11.293V1.5A.5.5 0 0 1 8 1z"/>
+                        <path d="M2 13.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+                    </svg>
+                    Install
+                </button>
+                <button id="btn-uninstall" class="btn-danger" disabled>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                        <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H5.5l1-1h3l1 1h2.5a1 1 0 0 1 1 1v1z"/>
+                    </svg>
+                    Uninstall
+                </button>
+            </div>
+
+            <div class="footer-info">
+                <span>Powered by Rust + Tauri</span>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>

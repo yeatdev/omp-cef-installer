@@ -1,0 +1,41 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nicecoder/tauri/dev/crates/tauri-config-schema/schema.json",
+  "productName": "OMP CEF Installer",
+  "version": "0.0.1",
+  "identifier": "com.yeatdev.omp-cef-installer",
+  "build": {
+    "frontendDist": "../src"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [
+      {
+        "title": "OMP CEF Installer",
+        "width": 800,
+        "height": 420,
+        "resizable": false,
+        "center": true,
+        "decorations": true
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "windows": {
+      "nsis": {
+        "installMode": "currentUser"
+      }
+    }
+  }
+}
