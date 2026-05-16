@@ -9,11 +9,11 @@ A lightweight desktop application for installing and managing Chromium Embedded 
 
 ## Features
 
-- ⚡ **Blazing fast** — Native Rust backend, ~5MB exe
-- 📦 Simple and fast CEF installation with progress tracking
-- 🔄 Automatic version checking and updates
-- 🗑️ One-click uninstallation
-- 🎨 Modern dark-themed UI
+- **Blazing fast** — Native Rust backend, ~15MB exe
+- Simple and fast CEF installation with progress tracking
+- Automatic version checking and updates
+- One-click uninstallation
+- Modern dark-themed UI
 
 ## Tech Stack
 
